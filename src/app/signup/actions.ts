@@ -3,7 +3,7 @@
 import { prisma } from "@/lib/prisma";
 import { createClient } from "@/utils/supabase/server"; // 아까 보여주신 그 코드
 
-export async function tempSignUp(formData: FormData) {
+export async function tempSignUp(prev: unknown, formData: FormData) {
   const email = formData.get("email") as string;
   const password = formData.get("password") as string;
 
