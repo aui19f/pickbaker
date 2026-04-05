@@ -13,7 +13,6 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   ref?: React.Ref<HTMLInputElement>;
   className?: string;
   isError?: boolean;
-  errMsg?: string;
 }
 
 // forwardRef 없이 일반 함수 컴포넌트로 정의
@@ -24,7 +23,6 @@ export default function Input({
   className,
   ref,
   isError = false,
-  errMsg = "",
   ...rest
 }: InputProps) {
   const sizeStyle = formGeometries[sizing];
@@ -54,7 +52,6 @@ export default function Input({
           className
         )}
       />
-      {errMsg !== "" && <p className="text-sm text-error mt-1">{errMsg}</p>}
     </div>
   );
 }

@@ -43,6 +43,7 @@ h6 {
 }
 @layer base {
   input,
+  .input,
   textarea,
   select {
     @apply bg-slate-50 border border-slate-300 placeholder:text-slate-200 focus:border-blue-400;

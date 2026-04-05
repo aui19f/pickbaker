@@ -31,7 +31,6 @@ export const Error: Story = {
     name: "password",
     placeholder: "비밀번호를 입력하세요",
     isError: true,
-    errMsg: "비밀번호는 8자 이상이어야 합니다.",
   },
 };
 
