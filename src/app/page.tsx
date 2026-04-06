@@ -1,11 +1,13 @@
-import ImageUploader from "@/components/forms/ImageUploader/ImageUploader";
+import MainHeader from "@/components/layout/MainHeader";
+import SubTabNav from "@/components/layout/SubTabNav";
+import { SUB_ITEMS } from "@/constants/navigation";
 
 export default async function Home() {
   return (
-    <div className="p-10">
-      <h1 className="text-2xl font-bold mb-4">테스트</h1>
-      <p>색상테스트</p>
-      <div className="space-y-4"></div>
+    <div>
+      <MainHeader title="제목" />
+
+      <SubTabNav items={SUB_ITEMS} />
     </div>
   );
 }
