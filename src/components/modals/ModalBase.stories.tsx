@@ -8,7 +8,7 @@ const meta: Meta<typeof ModalBase> = {
   parameters: {
     layout: "fullscreen",
   },
-  // 기본적으로 모달이 열린 상태로 테스트하기 위한 설정
+
   argTypes: {
     sizing: {
       control: "select",
@@ -17,9 +17,7 @@ const meta: Meta<typeof ModalBase> = {
     isBottom: {
       control: "select",
       options: [true, false],
-      // control: "boolean",
     },
-    // isOpen: true,
   },
 
   tags: ["autodocs"],

@@ -1,6 +1,7 @@
 "use client";
 
 import Button from "@/components/forms/Button/Button";
+import FullScreenLoading from "@/components/loading/FullScreen";
 
 import Alert from "@/components/modals/Alert";
 import Confirm from "@/components/modals/Confirm";
@@ -38,6 +39,9 @@ export default function Home() {
           </p>
         </div>
       </Confirm>
+
+      {/* <Spinner /> */}
+      <FullScreenLoading />
     </div>
   );
 }
