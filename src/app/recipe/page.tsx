@@ -1,0 +1,43 @@
+"use client";
+
+import Button from "@/components/forms/Button/Button";
+
+import Alert from "@/components/modals/Alert";
+import Confirm from "@/components/modals/Confirm";
+
+import { useState } from "react";
+
+export default function Home() {
+  const [isModal, setIsModal] = useState(false);
+  const [isConfirm, setIsConfirm] = useState(false);
+  return (
+    <div>
+      <Button onClick={() => setIsModal(!isModal)}>TEST</Button>
+      <Button onClick={() => setIsConfirm(!isConfirm)}>Confrim Test</Button>
+
+      <Alert isOpen={isModal} onClose={() => setIsModal(false)}>
+        <div className="text-center">
+          <p>안녕하세요</p>
+          <p>
+            <span className="text-error">테스트</span>
+            중입니다.
+          </p>
+        </div>
+      </Alert>
+
+      <Confirm
+        isOpen={isConfirm}
+        onClose={() => setIsConfirm(false)}
+        onConfirm={() => setIsConfirm(false)}
+      >
+        <div className="text-center">
+          <p>안녕하세요</p>
+          <p>
+            <span className="text-error">테스트</span>
+            중입니다.
+          </p>
+        </div>
+      </Confirm>
+    </div>
+  );
+}

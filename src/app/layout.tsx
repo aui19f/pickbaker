@@ -22,8 +22,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  modal,
 }: Readonly<{
   children: React.ReactNode;
+  modal: React.ReactNode;
 }>) {
   return (
     <html
@@ -33,7 +35,10 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <MainNavigation items={NAV_ITEMS} />
         <main className="flex-1 pb-16 lg:pb-0 lg:pl-64 transition-all">
-          <div className="p-4 md:p-8 max-w-5xl mx-auto w-full">{children}</div>
+          <div className="p-4 md:p-8 max-w-5xl mx-auto w-full">
+            {children}
+            {modal}
+          </div>
         </main>
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID as string} />
       </body>
