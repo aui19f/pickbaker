@@ -16,7 +16,7 @@ const meta: Meta<typeof SortableList> = {
 
 export default meta;
 
-// 💡 실제 Page.tsx의 로직을 그대로 가져온 '재현용' 스토리일세.
+// 💡 실제 Page.tsx의 로직 참고
 export const RecipeStepsExample: StoryObj = {
   render: () => {
     // 1. 내부 상태 관리 (Page.tsx와 동일)
